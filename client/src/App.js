@@ -6,7 +6,8 @@ function App() {
 
   const fetchWeather = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/weather?location=${location}`);
+      // const response = await fetch(`http://localhost:5000/api/weather?location=${location}`);
+      const response = await fetch(`https://weatherapp-yldl.onrender.com/api/weather?location=${location}`);
       const data = await response.json();
       if (data && data.daily) {
         setWeather(data.daily);
